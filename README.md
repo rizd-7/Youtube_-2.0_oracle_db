@@ -84,6 +84,5 @@ This project is a Node.js application that integrates with an Oracle database. I
 - Enhance error handling and logging.
 - Optimize database queries for performance.
 
-## License
-This project is licensed under the MIT License. Feel free to use and modify it as needed.
+
 
