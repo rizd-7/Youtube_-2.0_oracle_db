@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/videoplay.css" />
+
+    <title>video</title>
+  </head>
+  <body>
+    <nav class="flex-div">
+      <div class="nav-left flex-div">
+        <img src="./images/menu.png" class="menu-icon" alt="" srcset="" />
+        <a href="/"
+          ><img src="./images/logo.png" class="logo" alt="" srcset=""
+        /></a>
+      </div>
+      <div class="nav-middle flex-div">
+        <div class="search-box flex-div">
+          <input type="text" placeholder="Search.." />
+          <img src="./images/search.png" alt="" srcset="" />
+        </div>
+        <img
+          src="./images/voice-search.png"
+          class="mic-icon"
+          alt=""
+          srcset=""
+        />
+      </div>
+
+      <div class="nav-right flex-div">
+        <img src="./images/upload.png" alt="" srcset="" />
+        <img src="./images/more.png" alt="" srcset="" />
+        <img src="./images/notification.png" alt="" srcset="" />
+        <img src="./images/nilava.jpeg" class="user-icon" alt="" srcset="" />
+      </div>
+    </nav>
+
+    <div class="containervideo">
+      <div class="mainContent">
+        <div class="containervideo">
+          <iframe
+            id="video-player"
+            src="https://drive.google.com/file/d/<%= videos.content %>/preview"
+            allow="autoplay"
+            class="ifr"
+          ></iframe>
+        </div>
+
+        <div class="video-details">
+          <div class="text-details">
+            <h1 class="video-title"><%= videos.title %></h1>
+            <p class="video-author">Author: <%= videos.postedBy %></p>
+            <p class="video-publish-date">
+              Published on: <%= videos.publishDate %>
+            </p>
+
+            <div class="video-meta">
+              <span class="video-rating">Rating: <%= videos.rating %> / 5</span>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="like-button">Like</button>
+            <button class="share-button">Share</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="Abstraction">
+        <h3>description</h3>
+        <p><%= videos.description %></p>
+      </div>
+
+      <hr />
+
+      <div class="list-container">
+        <div class="banner">
+          <img src="./images/banner.png" alt="" srcset="" />
+        </div>
+
+        <% recomendation.forEach(video => { %>
+        <div class="vid-list">
+          <!-- Thumbnail -->
+          <a href="<%= video.id %>-<%= video.content%>" class="thumbnail-link">
+            <img
+              class="thumbnail"
+              src="data:image/png;base64,<%= video.thumbnail %>"
+              alt="<%= video.title %> Thumbnail"
+            />
+          </a>
+
+          <!-- Video Details -->
+          <div class="flex-div">
+            <div class="vid-info">
+              <a href="<%= video.id %>-<%= video.content%>" class="video-title"
+                ><%= video.title %></a
+              >
+              <p class="video-author"><%= video.postedBy %></p>
+              <p class="video-meta">
+                <%= video.category %> &bull; <%= video.length %> mins &bull;
+                Rating: <%= video.rating %>/5
+              </p>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="shortcut-links">
+        <a href="#"
+          ><img src="./images/home.png" />
+          <p>Home</p></a
+        >
+        <a href="#"
+          ><img src="./images/explore.png" />
+          <p>explore</p></a
+        >
+        <a href="#"
+          ><img src="./images/subscriprion.png" />
+          <p>subscriprion</p></a
+        >
+        <hr />
+        <a href="#"
+          ><img src="./images/library.png" />
+          <p>library</p></a
+        >
+        <a href="#"
+          ><img src="./images/history.png" />
+          <p>History</p></a
+        >
+        <a href="#"
+          ><img src="./images/playlist.png" />
+          <p>playlist</p></a
+        >
+        <a href="#"
+          ><img src="./images/messages.png" />
+          <p>messages</p></a
+        >
+        <a href="#"
+          ><img src="./images/show-more.png" />
+          <p>Show more</p></a
+        >
+        <hr />
+      </div>
+      <div class="subscribed-list">
+        <h3>SUBSCRIPTIONS</h3>
+        <a href="#"
+          ><img src="./images/Jack.png" />
+          <p>Jack &bull;</p></a
+        >
+        <a href="#"
+          ><img src="./images/simon.png" />
+          <p>simon</p></a
+        >
+        <a href="#"
+          ><img src="./images/tom.png" />
+          <p>Tom &bull;</p></a
+        >
+        <a href="#"
+          ><img src="./images/megan.png" />
+          <p>Megan Fox &bull;</p></a
+        >
+        <a href="#"
+          ><img src="./images/cameron.png" />
+          <p>Cameron Green</p></a
+        >
+      </div>
+    </div>
+    <script src="side-bar.js"></script>
+    <script src="innteraction.js"></script>
+  </body>
+</html>

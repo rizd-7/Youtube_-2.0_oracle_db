@@ -1,0 +1,93 @@
+.mainContent {
+  display: flex;
+  justify-content: start; /* Aligné à gauche */
+  align-items: center; /* Alignement vertical centré */
+  height: auto; /* Hauteur automatique */
+  padding-top: 3rem;
+  flex-direction: column;
+}
+
+.ifr {
+  border: none; /* Supprime la bordure */
+  border-radius: 10px; /* Coins arrondis */
+  overflow: hidden;
+  height: 70vh;
+  width: 100%;
+}
+
+.ifr iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.containervideo {
+  display: flex;
+  margin: auto;
+  width: 60vw;
+  flex-direction: column; /* Empile les éléments */
+ 
+}
+
+.video-details {
+  display: flex;
+  flex-direction: row; /* Aligner les éléments horizontalement */
+  justify-content: space-between; /* Espacer les éléments */
+  width: 100%;
+ 
+ 
+  margin-top: 1rem;
+  align-items: center; /* Aligner verticalement au centre */
+}
+
+.video-details .text-details {
+  display: flex;
+  flex-direction: column; /* Empile les détails de texte */
+  margin-right: 2rem; /* Espacement entre les détails et les boutons */
+}
+
+.video-details .video-meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px; /* Espacement entre les boutons */
+}
+
+.like-button,
+.share-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.like-button:hover,
+.share-button:hover {
+  background-color: #0056b3; /* Changement de couleur au survol */
+}
+
+.video-rating {
+  font-size: 16px;
+}
+
+.like-button.liked {
+  background-color: green; /* Color when liked */
+  color: white;
+}
+
+.share-button.shared {
+  background-color: blue; /* Color when shared */
+  color: white;
+}
+
+
+.Abstraction{
+  margin-top: 1rem;
+  color: rgba(0, 0, 0, 0.638);
+  margin-bottom: 5rem;
+}
